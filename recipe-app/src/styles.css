@@ -1,0 +1,118 @@
+/* Main Heading */
+.main-heading {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-family:  Helvetica;
+  }
+  
+  /* Sub Heading */
+  .sub-heading {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  /* Container */
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-image:url("https://sfwallpaper.com/images/free-food-backgrounds-20.jpg");
+  }
+  
+  /* Row */
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  /* Column */
+  .col {
+    flex-basis: 50%;
+    padding: 10px;
+  }
+  
+  /* Form Group */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  /* Form Label */
+  .form-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  /* Form Control */
+  .form-control {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  /* Button Add */
+  .buttonadd {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  /* Button Edit */
+  .buttonedit {
+    background-color: #2196F3;
+    color: white;
+    padding: 4px 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    margin-right: 4px;
+  }
+  
+  /* Button Delete */
+  .buttondelete {
+    background-color: #f44336;
+    color: white;
+    padding: 4px 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    margin-right: 4px;
+  }
+  
+  /* Recipe List */
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  /* Recipe List Item */
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  /* Paragraph */
+  .para {
+    font-style: italic;
+    margin-top: 10px;
+  }
+  
+  /* Clearfix */
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
