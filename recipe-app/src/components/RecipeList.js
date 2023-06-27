@@ -10,9 +10,9 @@ function RecipeList({ recipes, onEdit, onDelete }) {
         <ul>
           {recipes.map((recipe) => (
             <li key={recipe.id}>
-              <span>{recipe.title}</span>
-              <button className="buttonedit" onClick={() => onEdit(recipe.id)}>Edit</button>
-              <button className="buttondelete" onClick={() => onDelete(recipe.id)}>Delete</button>
+              <span className="sub-headlist">{recipe.title}</span>
+              <button className="buttonEdit" onClick={() => onEdit(recipe.id)}>Edit</button>
+              <button className="buttonDelete" onClick={() => onDelete(recipe.id)}>Delete</button>
             </li>
           ))}
         </ul>

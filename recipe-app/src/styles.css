@@ -1,27 +1,42 @@
-/* Main Heading */
-.main-heading {
+ /*Main Heading*/ 
+ .main-heading{
+    color:#fff; 
     text-align: center;
     font-size: 32px;
     margin-bottom: 20px;
-    font-family:  Helvetica;
+    font-family: papyrus;
   }
   
-  /* Sub Heading */
+  
+/*Sub Heading*/ 
   .sub-heading {
-    font-size: 24px;
+    color:#fff;
+    font-size: 23px;
+    font-family: cursive;
     margin-bottom: 10px;
   }
-  
-  /* Container */
-  .container {
+
+ /* Paragraph*/ 
+  .para {
+    color:white;
+    font-style: italic;
+    margin-top: 10px;
+  }
+  .sub-headlist{
+    color:white;
+    font-family:Belanosima;
+    margin-right:30px;
+  }
+    /* Container */
+  .container{
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    background-image:url("https://sfwallpaper.com/images/free-food-backgrounds-20.jpg");
+    background-image:url("https://images.pexels.com/photos/1907227/pexels-photo-1907227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
   }
-  
   /* Row */
   .row {
+  
     display: flex;
     flex-wrap: wrap;
   }
@@ -35,10 +50,13 @@
   /* Form Group */
   .form-group {
     margin-bottom: 15px;
+    color:whitesmoke;
   }
   
   /* Form Label */
   .form-label {
+    color:lightgray;
+    font-family:Geneva;
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
@@ -46,15 +64,16 @@
   
   /* Form Control */
   .form-control {
+    color:black;
     width: 100%;
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
   }
-  
-  /* Button Add */
-  .buttonadd {
+
+   /* Button Add */
+   .buttonAdd {
     background-color: #4CAF50;
     color: white;
     padding: 8px 16px;
@@ -65,7 +84,7 @@
   }
   
   /* Button Edit */
-  .buttonedit {
+  .buttonEdit {
     background-color: #2196F3;
     color: white;
     padding: 4px 8px;
@@ -77,7 +96,7 @@
   }
   
   /* Button Delete */
-  .buttondelete {
+  .buttonDelete {
     background-color: #f44336;
     color: white;
     padding: 4px 8px;
@@ -88,31 +107,41 @@
     margin-right: 4px;
   }
   
-  /* Recipe List */
-  ul {
-    list-style-type: none;
-    padding: 0;
+  /* For screen sizes up to 600px */
+  @media (max-width: 600px) {
+  .container {
+    max-width: 100%;
+    padding: 10px;
   }
   
-  /* Recipe List Item */
-  li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 8px 0;
-    border-bottom: 1px solid #ccc;
+  .col {
+    flex-basis: 100%;
+    padding: 5px;
+  }
   }
   
-  /* Paragraph */
-  .para {
-    font-style: italic;
-    margin-top: 10px;
+  /* For screen sizes between 601px and 900px */
+  @media (min-width: 601px) and (max-width: 900px) {
+  .container {
+    max-width: 100%;
+    padding: 15px;
   }
   
-  /* Clearfix */
-  .clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
+  .col {
+    flex-basis: 50%;
+    padding: 10px;
+  }
   }
   
+  /* For screen sizes larger than 900px */
+  @media (min-width: 901px) {
+  .container {
+    max-width: 800px;
+    padding: 20px;
+  }
+  
+  .col {
+    flex-basis: 50%;
+    padding: 10px;
+  }
+}

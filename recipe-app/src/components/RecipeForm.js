@@ -4,13 +4,14 @@ import React, { useState, useEffect } from 'react';
 function RecipeForm({ onAdd, onUpdate, editingRecipe }) {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
-  const [instructions, setInstructions] = useState('');
+  const [ingredients, setIngredients] = useState('');
 
   useEffect(() => {
     if (editingRecipe) {
       setTitle(editingRecipe.title);
+      setIngredients(editingRecipe.ingredients);
       setDescription(editingRecipe.description);
-      setInstructions(editingRecipe.instructions);
+    
     }
   }, [editingRecipe]);
 
@@ -20,7 +21,7 @@ function RecipeForm({ onAdd, onUpdate, editingRecipe }) {
       id: editingRecipe ? editingRecipe.id : Date.now(),
       title,
       description,
-      instructions,
+      ingredients,
     };
 
     if (editingRecipe) {
@@ -30,8 +31,9 @@ function RecipeForm({ onAdd, onUpdate, editingRecipe }) {
     }
 
     setTitle('');
+    setIngredients('');
     setDescription('');
-    setInstructions('');
+   
   };
 
   return (
@@ -47,6 +49,17 @@ function RecipeForm({ onAdd, onUpdate, editingRecipe }) {
             id="title"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
+            
+          />
+        </div>
+        <div className="form-group">
+          <label className="form-label"  htmlFor="ingredients">Ingredients:</label>
+          <textarea
+          placeholder="Ingredients"
+          className="form-control"
+            id="ingredients"
+            value={ingredients}
+            onChange={(e) => setIngredients(e.target.value)}
           />
         </div>
         <div className="form-group">
@@ -59,17 +72,8 @@ function RecipeForm({ onAdd, onUpdate, editingRecipe }) {
             onChange={(e) => setDescription(e.target.value)}
           />
         </div>
-        <div className="form-group">
-          <label className="form-label"  htmlFor="instructions">Instructions:</label>
-          <textarea
-          placeholder="Ingredients"
-          className="form-control"
-            id="instructions"
-            value={instructions}
-            onChange={(e) => setInstructions(e.target.value)}
-          />
-        </div>
-        <button className="buttonadd"type="submit">{editingRecipe ? 'Update' : 'Add'}</button>
+
+        <button className="buttonAdd" type="submit">{editingRecipe ? 'Update' : 'Add'}</button>
       </form>
     </div>
   );

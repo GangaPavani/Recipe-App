@@ -1,0 +1,26 @@
+{
+  "name": "recipe",
+  "version": "1.0.0",
+  "description": "Recipe Management System",
+  "main": "App.js",
+  "scripts": {
+    "start": "node App.js" ,
+    "App":"nodemon App.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GangaPavani/Recipe-Management-System.git"
+  },
+  "author": "Pavani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GangaPavani/Recipe-Management-System/issues"
+  },
+  "homepage": "https://github.com/GangaPavani/Recipe-Management-System#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}

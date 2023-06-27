@@ -1,98 +1,138 @@
-/* Main container */
-.container {
+.main-heading{
+  color:#fff; 
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-family: papyrus;
+}
+
+
+/* Sub Heading */
+h2 {
+  color:#fff;
+  font-size: 23px;
+  font-family: cursive;
+  margin-bottom: 35px;
+}
+
+/* Container */
+.container{
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  font-family: Arial, sans-serif;
+  background-image:url("https://images.pexels.com/photos/1907227/pexels-photo-1907227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
 }
 
-/* Heading */
-h1 {
-  color: #333;
-  text-align: center;
-}
+/* Row */
+.row {
 
-/* Recipe List */
-.recipe-list {
-  margin-top: 20px;
-}
-
-.recipe-list h2 {
-  font-size: 24px;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.recipe-list ul {
-  list-style: none;
-  padding: 0;
-}
-
-.recipe-list li {
   display: flex;
-  align-items: center;
-  margin-bottom: 10px;
+  flex-wrap: wrap;
 }
 
-.recipe-list li span {
-  flex-grow: 1;
-  color: #333;
-  font-weight: bold;
+/* Column */
+.col {
+  flex-basis: 50%;
+  padding: 10px;
 }
 
-.recipe-list button {
-  margin-left: 10px;
-  padding: 5px 10px;
-  background-color: #333;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+/* Form Group */
+.form-group {
+  margin-bottom: 15px;
+  color:whitesmoke;
 }
 
-.recipe-list button:hover {
-  background-color: #555;
-}
-
-/* Recipe Form */
-.recipe-form {
-  margin-top: 20px;
-}
-
-.recipe-form h2 {
-  font-size: 24px;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.recipe-form form {
-  display: flex;
-  flex-direction: column;
-}
-
-.recipe-form label {
+/* Form Label */
+.form-label {
+  color:lightgray;
+  font-family:Geneva;
+  display: block;
   margin-bottom: 5px;
-  color: #333;
   font-weight: bold;
 }
 
-.recipe-form input,
-.recipe-form textarea {
-  margin-bottom: 10px;
-  padding: 5px;
-  font-size: 16px;
+/* Form Control */
+.form-control {
+  color:black;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
-.recipe-form button {
-  padding: 5px 10px;
-  font-size: 16px;
-  background-color: #333;
-  color: #fff;
+/* Button Add */
+.buttonAdd {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 16px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  font-size: 14px;
 }
 
-.recipe-form button:hover {
-  background-color: #555;
+/* Button Edit */
+.buttonEdit {
+  background-color: #2196F3;
+  color: white;
+  padding: 4px 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  margin-right: 4px;
 }
+
+/* Button Delete */
+.buttonDelete {
+  background-color: #f44336;
+  color: white;
+  padding: 4px 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  margin-right: 4px;
+}
+
+/* For screen sizes up to 600px */
+@media (max-width: 600px) {
+.container {
+  max-width: 100%;
+  padding: 10px;
+}
+
+.col {
+  flex-basis: 100%;
+  padding: 5px;
+}
+}
+
+/* For screen sizes between 601px and 900px */
+@media (min-width: 601px) and (max-width: 900px) {
+.container {
+  max-width: 100%;
+  padding: 15px;
+}
+
+.col {
+  flex-basis: 50%;
+  padding: 10px;
+}
+}
+
+/* For screen sizes larger than 900px */
+@media (min-width: 901px) {
+.container {
+  max-width: 800px;
+  padding: 20px;
+}
+
+.col {
+  flex-basis: 50%;
+  padding: 10px;
+}
+}
+
+
