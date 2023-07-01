@@ -1,10 +1,10 @@
-
 import React, { useState, useEffect } from 'react';
 
 function RecipeForm({ onAdd, onUpdate, editingRecipe }) {
   const [title, setTitle] = useState('');
-  const [description, setDescription] = useState('');
   const [ingredients, setIngredients] = useState('');
+  const [description, setDescription] = useState('');
+  
 
   useEffect(() => {
     if (editingRecipe) {
